@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Leaflet Map</title>
+    <title>Covid19 Sleman</title>
     <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css" />
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
@@ -55,6 +55,10 @@
             margin: 0 0 5px;
             color: #777;
         }
+
+        body {
+            background-color: rgba(16, 154, 200, 0.171);
+        }
     </style>
 </head>
 
@@ -62,25 +66,27 @@
     <nav class="navbar navbar-expand-sm bg-dark navbar-dark">
         <!-- Brand/logo -->
         <a class="navbar-brand" href="#">
-          <img src="ugm.png" alt="logo" style="width:40px;">
+            <img src="ugm.png" alt="logo" style="width:40px;">
         </a>
-        
+
         <!-- Links -->
         <ul class="navbar-nav">
-          <li class="nav-item">
-            <a class="nav-link" href="https://ugm.ac.id/id/">Universitas Gadjah Mada</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="https://sv.ugm.ac.id/departemen-teknologi-kebumian-dtk/">Departemen Teknologi Kebumian</a>
-          </li>
+            <li class="nav-item">
+                <a class="nav-link" href="https://ugm.ac.id/id/">Universitas Gadjah Mada</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="https://sv.ugm.ac.id/departemen-teknologi-kebumian-dtk/">Departemen Teknologi
+                    Kebumian</a>
+            </li>
         </ul>
-      </nav>
+    </nav>
 
-      <body>
+    <body>
         <div class="container">
-        <div class="alert alert-primary text-center mt-3" role="alert">
-            <h1 class="text-center"></i>WEB GIS KABUPATEN SLEMAN</h1>
-          </div>
+            <div class="card mt-4 shadow">
+                <div class="card-header text-center">
+                    <h1> <i class="fa-solid fa-hospital"></i> KASUS COVID 19 KABUPATEN SLEMAN</h1>
+                </div>
     </body>
 
     <div id="map"></div>
@@ -186,7 +192,7 @@
         L.Control.Legend = L.Control.extend({
             onAdd: function (map) {
                 var img = L.DomUtil.create('img');
-                img.src = 'assets/img/legend/legenda4.png';
+                img.src = 'assets/img/legend/legend3.png';
                 img.style.width = '175px';
                 return img;
             }
@@ -425,6 +431,149 @@
         map.addLayer(markers);
 
     </script>
+
+    <div class="container-fluid">
+        <h1></h1>
+        <p style="text-align:center">Dinas Kesehatan Kabupaten Sleman mengeluarkan peta epidemologi Covid-19 per 30
+            Desember 2020. Dari peta epidemologi, beberapa kecamatan di Kabupaten Sleman masuk kategori zona merah
+            Covid-19. Dari peta epidemologi Covid-19 per 30 Desember 2020 tampak 2 kecamatan di Kabupaten Sleman
+            berwarna merah. Di keterangan legenda peta, tertulis warna krem risiko penularan rendah, warna oranye risiko
+            penularan sedang. Sedangkan warna merah berarti risiko penularan tinggi. Zona merah meliputi Kecamatan
+            (Kapanewon) Sleman dan Depok. Kecamatan yang masuk zona oranye meliputi Kecamatan Tempel, Mlati, Ngaglik,
+            Ngemplak. Kemudian terdapat dua kecamatan yang masuk dalam zona krem yakni Kecamatan Turi, Pakem,
+            Cangkringan, Sayegan, Godean, Minggir, Moyudan, Gamping, Kalasan, Berbah, Prambanan.
+            Lonjakan kasus Covid-19 di Kabupaten Sleman mulai pertengahan November 2020. Lonjakan kasus masih berlanjut
+            sampai di akhir Desember 2020. Pemerintah Kabupaten Sleman terus mendorong dan mengharapkan masyarakat untuk
+            disiplin menerapkan protokol kesehatan sesuai Perbup Nomor 37.1 Tahun 2020 tentang Penerapan Disiplin Dan
+            Penegakan Hukum Protokol Kesehatan Sebagai Upaya Pencegahan dan Pengendalian Corona Virus Disease 2019
+            (Covid-19)
+        </p>
+    </div>
+
+    <div class="container mt-3">
+        <h2 style="text-align:center"> Data Kasus Covid 19 Kabupaten Sleman</h2>
+        <table class="table">
+            <thead class="table-dark">
+                <tr>
+                    <th>Kecamatan</th>
+                    <th>Jumlah Aktif</th>
+                    <th>Jumlah Meninggal</th>
+                    <th>Jumlah Sembuh</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Berbah</td>
+                    <td>126</td>
+                    <td>153</td>
+                    <td>1545</td>
+                </tr>
+                <tr>
+                    <td>Cangkringan</td>
+                    <td>142</td>
+                    <td>41</td>
+                    <td>1182</td>
+                </tr>
+                <tr>
+                    <td>Depok</td>
+                    <td>941</td>
+                    <td>354</td>
+                    <td>8659</td>
+                </tr>
+                <tr>
+                    <td>Gamping</td>
+                    <td>290</td>
+                    <td>201</td>
+                    <td>3203</td>
+                </tr>
+                <tr>
+                    <td>Godean</td>
+                    <td>209</td>
+                    <td>167</td>
+                    <td>2592</td>
+                </tr>
+                <tr>
+                    <td>Kalasan</td>
+                    <td>295</td>
+                    <td>189</td>
+                    <td>2878</td>
+                </tr>
+                <tr>
+                    <td>Minggir</td>
+                    <td>94</td>
+                    <td>63</td>
+                    <td>1213</td>
+                </tr>
+                <tr>
+                    <td>Mlati</td>
+                    <td>493</td>
+                    <td>230</td>
+                    <td>4823</td>
+                </tr>
+                <tr>
+                    <td>Moyudan</td>
+                    <td>257</td>
+                    <td>52</td>
+                    <td>1094</td>
+                </tr>
+                <tr>
+                    <td>Ngaglik</td>
+                    <td>530</td>
+                    <td>204</td>
+                    <td>4286</td>
+                </tr>
+                <tr>
+                    <td>Ngemplak</td>
+                    <td>438</td>
+                    <td>130</td>
+                    <td>3372</td>
+                </tr>
+                <tr>
+                    <td>Pakem</td>
+                    <td>199</td>
+                    <td>56</td>
+                    <td>1241</td>
+                </tr>
+                <tr>
+                    <td>Prambanan</td>
+                    <td>96</td>
+                    <td>82</td>
+                    <td>2109</td>
+                </tr>
+                <tr>
+                    <td>Sayegan</td>
+                    <td>194</td>
+                    <td>84</td>
+                    <td>2109</td>
+                </tr>
+                <tr>
+                    <td>Sleman</td>
+                    <td>717</td>
+                    <td>157</td>
+                    <td>2213</td>
+                </tr>
+                <tr>
+                    <td>Tempel</td>
+                    <td>529</td>
+                    <td>119</td>
+                    <td>2699</td>
+                </tr>
+                <tr>
+                    <td>Turi</td>
+                    <td>115</td>
+                    <td>72</td>
+                    <td>1134</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <div style="text-align:center" class="col">
+            <iframe width="600" height="350" src="https://www.youtube.com/embed/xHRvDGCDkUc?si=WOjp1yhlDummrXQ2"
+                title="YouTube video player" frameborder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                allowfullscreen></iframe>
+        </div>
+    </div>
     <div class="text-center mt-2">
         <small class="text-secondary">Departemen Teknologi Kebumian | Sistem Informasi Geografis</small>
     </div>
